@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urlparse
 
+
 class Crawler:
     def __init__(self, user_agent=None):
         self.headers = {
@@ -61,7 +62,8 @@ class Crawler:
         if not html:
             return "[ERROR] HTML 로딩 실패"
         return self.parse(html, domain)
-    
+
+
 if __name__ == "__main__":
     crawler = Crawler()
     url = "https://n.news.naver.com/article/009/0005537920?cds=news_media_pc&type=editn"
