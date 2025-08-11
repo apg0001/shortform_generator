@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <title>요약 결과</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>요약 결과</h1>
+    <section class="card">
+      <h2>요약 스크립트</h2>
+      <p class="summary">{{ summary }}</p>
+    </section>
+
+    <section class="card">
+      <h2>원문 미리보기</h2>
+      <p class="meta">URL: <a href="{{ url }}" target="_blank" rel="noopener">{{ url }}</a></p>
+      <p class="meta">원문 길이: {{ length }} chars</p>
+      <pre class="preview">{{ original_preview }}</pre>
+    </section>
+
+    <div class="actions">
+      <a href="/" class="button">다른 URL 요약</a>
+    </div>
+  </main>
+</body>
+</html>
